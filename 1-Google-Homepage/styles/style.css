@@ -1,21 +1,69 @@
+.links {
+    text-decoration: none;
+    color: inherit;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.links:hover {
+    text-decoration: underline;
+}
+.right-link {
+    float: right;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15rem;
+}
 #logo {
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 272px;
+    height: 92px;
+    margin-bottom: 2rem;
 }
 .search {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 580px;
 }
 #search-bar {
-    width: 580px;
-    padding: 1rem;
-    padding-right: 1.5rem;
+    width: 90%;
+    font-size: 2rem;
     border-radius: 30px;
+    border-color: rgba(32, 33, 36, 0.28);
+    padding-right: 2em;
 }
-#search-bar:hover {
+#search-bar:hover, #search-bar:focus-within {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+#search-glass {
+    position: fixed;
+    height: 25px;
+    width: 25px;
+    padding-left: 1em;
+}
+#microphone {
+    position: fixed;
+    height: 25px;
+    width: 25px;
+    padding-left: 34em;
+}
+.buttons {
+    margin-top:30px;
+}
+.button {
+    background-color: #f5f5f5;
+    border: none;
+    color:#707070;
+    font-size:15px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    outline: none;
+}
+.button:hover {
+    box-shadow: 0 1px 1px 0 rgba(32, 33, 36, 0.28);
 }
