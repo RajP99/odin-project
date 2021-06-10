@@ -1,3 +1,6 @@
+body {
+    background: radial-gradient(circle, blue, white);
+}
 .scoreboard {
     font-family: 'DejaVu Sans Mono', monospace;
     text-align: center;
@@ -19,15 +22,21 @@
     margin-right: 320px;
     float: right;
 }
-.buttons {
+.player-buttons {
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
 }
+.computer-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(20%, -50%);
+}
 .button {
     margin-left: 30px;
 }
-.button:hover {
+.playerButton:hover {
     padding: 20px 60px;
 }
 .playing {

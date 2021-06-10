@@ -14,11 +14,15 @@ document.addEventListener('transitionend', function (e) {
 function changeGraphics(playerSelection) {
     btn = document.getElementById(playerSelection);
     btn.classList.add('playing');
-    playRound(playerSelection);
+    computerSelection = computerPlay();
+
+    btn_computer = document.getElementById("computer-"+computerSelection);
+    btn_computer.classList.add('playing');
+
+    playRound(playerSelection, computerSelection);
 }
 
-function playRound(playerSelection) {
-    computerSelection = computerPlay();
+function playRound(playerSelection, computerSelection) {
     if ((playerSelection === "rock" && computerSelection === "scissors") 
     || (playerSelection === "paper" && computerSelection === "rock") 
     || (playerSelection === "scissors" && computerSelection === "paper")) {
