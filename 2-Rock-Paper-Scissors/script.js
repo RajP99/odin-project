@@ -3,9 +3,19 @@ let player_score = computer_score = 0;
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(playRound(button.value));
+        changeGraphics(button.value);
     });
 });
+
+document.addEventListener('transitionend', function (e) {
+    e.target.classList.remove('playing');
+});
+
+function changeGraphics(playerSelection) {
+    btn = document.getElementById(playerSelection);
+    btn.classList.add('playing');
+    playRound(playerSelection);
+}
 
 function playRound(playerSelection) {
     computerSelection = computerPlay();
