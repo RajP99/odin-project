@@ -2,8 +2,21 @@
 <html>
     <head>
         <title>BookApp</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        
+        <div>
+            <button class="add-new-book">New Book</button>
+        </div>
+        <div class="new-book-form">
+            <h3>Add New Book</h3>
+            <div class="popup">
+                <input class="popup-input" type="text" id="title" placeholder="Title" required/>
+                <input class="popup-input" type="text" id="author" placeholder="Author" required/>
+                <input class="popup-input" type="number" id="pages" placeholder="Num Pages" required/>
+                <input class="popup-input" type="checkbox" id="read"/>
+            </div>
+        </div>
+        <footer><script type="text/javascript" src="script.js"></script></footer>
     </body>
 </html>

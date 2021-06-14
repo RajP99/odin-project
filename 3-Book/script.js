@@ -10,3 +10,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(book) {
     myLibrary.push(book);
 }
+
+document.querySelector(".add-new-book").addEventListener("click", function() {
+    document.querySelector(".popup").classList.add("test");
+});
