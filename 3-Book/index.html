@@ -6,17 +6,19 @@
     </head>
     <body>
         <div>
-            <button class="add-new-book">New Book</button>
+            <button id="book-form">New Book</button>
         </div>
         <div class="new-book-form">
-            <h3>Add New Book</h3>
-            <div class="popup">
-                <input class="popup-input" type="text" id="title" placeholder="Title" required/>
-                <input class="popup-input" type="text" id="author" placeholder="Author" required/>
-                <input class="popup-input" type="number" id="pages" placeholder="Num Pages" required/>
-                <input class="popup-input" type="checkbox" id="read"/>
-            </div>
+            <form class="popup">
+                <h3>Add New Book</h3><br>
+                <input class="popup-input" type="text" id="title" placeholder="Title" required/><br>
+                <input class="popup-input" type="text" id="author" placeholder="Author" required/><br>
+                <input class="popup-input" type="number" id="pages" placeholder="Num Pages" required/><br>
+                Have you read the book? <input class="popup-input" type="checkbox" id="read" required/><br>
+                <button id="submit-book" type="submit">SUBMIT</button>
+            </form>
         </div>
+        <div id="booksGrid"></div>
         <footer><script type="text/javascript" src="script.js"></script></footer>
     </body>
 </html>

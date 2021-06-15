@@ -1,3 +1,6 @@
-.test {
+.popup {
     transform: scale(0);
+}
+.popup-active {
+    transform: scale(1);
 }
