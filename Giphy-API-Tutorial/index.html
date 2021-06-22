@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+    <button>Click here to see a Cat!</button>
+    <br><br><br>
+    <div>
+        <img src="#"/>
+    </div>
+    <script>
+        const btn = document.querySelector("button");
+        btn.onclick = (function()  {
+            showCat();
+        });
+
+        function showCat() {
+            const img = document.querySelector('img');
+            fetch('https://api.giphy.com/v1/gifs/translate?api_key=ox5S4m0gqQ6gybzLBqS53jWTUL5SKyI0&s=cats', {mode: "cors"})
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(response) {
+                img.src = response["data"]["images"]["original"]["url"];
+            });
+        }
+
+    </script>
+</body>
+</html>
