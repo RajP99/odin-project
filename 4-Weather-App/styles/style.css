@@ -1,0 +1,6 @@
+.change-deg {
+    transform: scale(0);
+}
+.change-deg-active {
+    transform: scale(1);
+}
