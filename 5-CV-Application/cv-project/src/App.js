@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import EditMode from "./components/EditMode"
 
 class App extends Component {
   constructor() {
@@ -6,7 +7,7 @@ class App extends Component {
 
     this.state = {
       editMode: true,
-      details = {
+      details: {
         firstName: "",
         lastName: "",
         email: "",
@@ -15,10 +16,21 @@ class App extends Component {
     }
   }
 
+  edit = () => {
+    this.setState({
+      editMode: true
+    })
+  }
+  preview = () => {
+    this.setState({
+      editMode: false
+    })
+  }
+
   setFirstName = (e) => {
     const personal = this.state.details;
-    const firstName = e.target.value;
-    personal.firstName = firstName;
+    // const firstName = e.target.value;
+    personal.firstName = e.target.value;
     this.setState({
       details: personal
     })
@@ -42,7 +54,7 @@ class App extends Component {
     })
   }
 
-  setlastName = (e) => {
+  setPhone = (e) => {
     const personal = this.state.details;
     const phone = e.target.value;
     personal.phone = phone;
@@ -52,19 +64,28 @@ class App extends Component {
   }
 
   render() {
-    const { task, tasks } = this.state;
+    const { editMode, personalDetails } = this.state;
+    let curr = null;
+    if (editMode) {
+      curr = <EditMode
+        details = {this.state.details}
+        setFirstName = {() => {this.setFirstName()}}
+        setLastName = {() => {this.setLastName()}}
+        setEmail = {() => {this.setEmail()}}
+        setPhone = {() => {this.setPhone()}}
+      ></EditMode>
+    }
 
     return (
       <div>
-        <form onSubmit={this.addTask}>
-          <label htmlFor="taskInput">Enter Task:</label>
-          <input onChange={this.getTaskText} value={task.text} type="text" id="taskInput"></input>
-          <button type="submit">Submit Task</button>
-        </form>
-        <Overview tasks={tasks}></Overview>
+        <button onClick={this.edit}>Edit Mode</button>
+        <button onClick={this.preview}>Preview Mode</button>
+        <div>{curr}</div>
       </div>
-    );
+    )
   }
+
+  
 }
 
 export default App;
