@@ -4,16 +4,11 @@ import Button from "./Button"
 
 import React from 'react'
 
-const Header = (props) => {
-    
-    const onClick = () => {
-        console.log("Click")
-    }
-
-    return (
+const Header = ({ title, onAdd, showAdd }) => {
+        return (
         <header className="header">
-            <h1 >{props.title}</h1>
-            <Button color="green" text="Add" onClick={onClick}></Button>
+            <h1 >{title}</h1>
+            <Button color={!showAdd ? "Green": "Red"} text={!showAdd ? "Add": "Close"} onClick={onAdd}></Button>
         </header>
     )
 }
