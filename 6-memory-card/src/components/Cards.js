@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Cards() {
+const Cards = ( { name, image, checkCardSubmission } ) => {
     return (
-        <div>
-            
+        <div onClick = {() => checkCardSubmission(name)}>
+            <img src = {image}></img>
+            <p>{name}</p>
         </div>
     )
 }
