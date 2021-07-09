@@ -1,0 +1,9 @@
+#scoreboard {
+    font-family: 'DejaVu Sans Mono', monospace;
+    text-align: center;
+}
+
+span{
+    padding-right: 30px;
+    padding-left: 30px;
+    }
