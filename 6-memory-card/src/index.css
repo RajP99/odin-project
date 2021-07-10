@@ -9,17 +9,22 @@ span{
     }
 
 .grid {
-    display: flex;                       
-    flex-wrap: wrap;                     
-    justify-content: space-around;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
 }
 
 .card {
     border-radius: 100%;
-    width: 300px;
+    width: 175px;
 }
 
-/* .card-name {
+.card-name{
+    margin: 0px;
+    padding: 0px;
     font-family: 'DejaVu Sans Mono', monospace;
     text-align: center;
-} */
+    font-size: 20px;
+}
