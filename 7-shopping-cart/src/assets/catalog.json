@@ -1,0 +1,60 @@
+[
+    {
+      "id": 0,
+      "name": "Mercury",
+      "product_type": "Poster",
+      "price": 19.99,
+      "imgs": ["poster_mercury_front_a.jpg"]
+    },
+    {
+      "id": 1,
+      "name": "Venus",
+      "product_type": "Poster",
+      "price": 19.99,
+      "imgs": ["poster_venus_front_a.jpg"]
+    },
+    {
+      "id": 2,
+      "name": "Earth",
+      "product_type": "Poster",
+      "price": 34.99,
+      "imgs": ["poster_earth_front_a.jpg"]
+    },
+    {
+      "id": 3,
+      "name": "Mars",
+      "product_type": "Poster",
+      "price": 9.99,
+      "imgs": ["poster_mars_front_a.jpg"]
+    },
+    {
+      "id": 4,
+      "name": "Jupiter",
+      "product_type": "Poster",
+      "price": 19.99,
+      "imgs": ["poster_jupiter_front_a.jpg"],
+      "description": "This true color mosaic of Jupiter was constructed from images taken by the narrow angle camera onboard NASA's Cassini spacecraft in December 2000. Credit: NASA/JPL/Space Science Institute."
+    },
+    {
+      "id": 5,
+      "name": "Saturn",
+      "product_type": "Poster",
+      "price": 19.99,
+      "imgs": ["poster_saturn_front_a.jpg"]
+    },
+    {
+      "id": 6,
+      "name": "Uranus",
+      "product_type": "Poster",
+      "price": 19.99,
+      "imgs": ["poster_uranus_front_a.jpg"]
+    },
+    {
+      "id": 7,
+      "name": "Neptune",
+      "product_type": "Poster",
+      "price": 19.99,
+      "imgs": ["poster_neptune_front_a.jpg"]
+    }
+  ]
+  
