@@ -1,0 +1,15 @@
+.image-checkout {
+    width: 150px;
+}
+
+.item-details-checkout {
+    display:inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.quantity {
+    display:inline-block;
+    vertical-align: bottom;
+    padding-left: 10px;
+}

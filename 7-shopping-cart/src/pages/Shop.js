@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'; 
 import Catalog from "../assets/catalog.json";
+import "../styles/Shop.css"
 
 const Shop = () => {
     const planets = Catalog;
@@ -22,11 +23,12 @@ const Shop = () => {
             {(planets).map((planet) => {
                 let image_url = images[planet.imgs[0]]["default"];
                 return (
-                    <Link key={planet.id} to={`shop/${planet.id}`}>
-                        <div>
-                            <img src={image_url}></img>
-                        </div>
-                    </Link>
+                    <div className="item-containter-shop">
+                        <Link key={planet.id} to={`shop/${planet.id}`}>
+                            <img className="item-shop" src={image_url} alt={planet.name}></img>
+                        </Link>
+                    </div>
+                    
                 )
         })}
         </div>
