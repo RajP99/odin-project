@@ -1,0 +1,27 @@
+.container-navbar {
+    margin-left:-50px;
+    margin-right:-10px;
+    margin-top:-8px;
+    background-color: black;
+    height: 40px;
+}
+.left-nav {
+    float: left;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-top: 5px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.right-nav {
+    float: right;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 7px;
+    font-size: 20px;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.text-nav {
+    color: white;
+}

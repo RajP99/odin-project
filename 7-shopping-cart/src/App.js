@@ -38,7 +38,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <NavBar></NavBar>
+        <NavBar cartSize={cart.length}></NavBar>
         <Switch>
           <Route exact path="/" component={Landing}></Route>
           <Route exact path="/shop" component={Shop}></Route>
