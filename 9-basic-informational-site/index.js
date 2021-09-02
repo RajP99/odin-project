@@ -1,48 +1,22 @@
-const http = require("http")
-const fs = require("fs")
+const path = require('path')
+const express = require("express")
+const app = express()
 
 const port = process.env.PORT || 8080
 
-const server = http.createServer((req, res) => {
-    if (req.url === "/") {
-        fs.readFile("./index.html", (err, data) => {
-            if (err) {
-                throw err
-            }
-            res.setHeader("Content-Type", "text/html")
-            res.write(data)
-            res.end()
-        })   
-    } else if (req.url === "/about") {
-        fs.readFile("./about.html", (err, data) => {
-            if (err) {
-                throw err
-            }
-            res.setHeader("Content-Type", "text/html")
-            res.write(data)
-            res.end()
-        })   
-    } else if (req.url === "/contact") {
-        fs.readFile("./contact-me.html", (err, data) => {
-            if (err) {
-                throw err
-            }
-            res.setHeader("Content-Type", "text/html")
-            res.write(data)
-            res.end()
-        })   
-    } else {
-        fs.readFile("./error-404.html", (err, data) => {
-            if (err) {
-                throw err
-            }
-            res.setHeader("Content-Type", "text/html")
-            res.write(data)
-            res.end()
-        }) 
-    }
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"))
 })
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname,"about.html"))
+})
+app.get("/contact", (req, res) => {
+    res.sendFile(path.join(__dirname,"contact-me.html"))
+})
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname,"error-404.html"))
+// })
 
-server.listen(port, () => {
-    console.log(`Server running at port ${port}`)
+app.listen(port, () => {
+    console.log(`App running at port ${port}`)
 })
